@@ -1,15 +1,15 @@
 var start;
 onmessage = getStart;
 function getStart(event) {
-	console.log('start');
 	start = event.data;
+	console.log('start',event.data);
 	onmessage = getEnd;
 }
 
 var end;
 function getEnd(event) {
-	console.log('end');
 	end = event.data;
+	console.log('end',end);
 	onmessage = null;
 	work();
 }
@@ -19,6 +19,7 @@ function work() {
 	for (var i = start; i < end; i++) {
 		result += 1;
 	}
+	console.log('result',result);
 	postMessage(result);
 	close();
 }

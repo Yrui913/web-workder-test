@@ -13,6 +13,7 @@
 
 	function storeResult(event) {
 		result += event.data;
+		
 		pending_workers -= 1;
 		if(pending_workers <= 0) {
 			postMessage(result);  //finished!
