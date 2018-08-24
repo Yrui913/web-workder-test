@@ -6,7 +6,7 @@
 	console.log('second node',second);
 	//兼容检测
 	if(window.Worker) {
-		var myWorker =  new Worker(window.location.origin +  '/web-worker-test/' +'worker.js');
+		var myWorker =  new Worker('./worker.js');
 		first.onchange = function() {
 			myWorker.postMessage([first.value,second.value]);
 			console.log('message posted to worker');
