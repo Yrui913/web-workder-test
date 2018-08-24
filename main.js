@@ -4,6 +4,7 @@
 	var result = document.getElementById('result');
 	console.log('first node', first);
 	console.log('second node',second);
+	console.log('result node',result);
 	//兼容检测
 	if(window.Worker) {
 		var myWorker =  new Worker('./worker.js');
