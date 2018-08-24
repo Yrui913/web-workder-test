@@ -24,7 +24,4 @@
 			console.log('message received from worker');
 		}
 	}
-	function getUrl(){
-
-	}
 })();
