@@ -15,10 +15,10 @@
 			result.textContent = event.data;
 		}
 
-		myWorker.onerror(function(event) {
+		myWorker.onerror = function(event) {
 			console.log([
 				'ERROR: Line ', e.lineno, ' in ', e.filename,  ' : ',  e.message
 				].join(' '));
-		});
+		};
 	}
 })();

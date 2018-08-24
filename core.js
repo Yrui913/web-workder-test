@@ -1,12 +1,14 @@
 var start;
 onmessage = getStart;
 function getStart(event) {
+	console.log('start');
 	start = event.data;
 	onmessage = getEnd;
 }
 
 var end;
 function getEnd(event) {
+	console.log('end');
 	end = event.data;
 	onmessage = null;
 	work();
